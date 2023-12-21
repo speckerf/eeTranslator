@@ -50,20 +50,6 @@ class eeMLPRegressor:
         else:
             raise ValueError
     
-    def _forward_pass_array(self, ee_X: ee.Array) -> ee.Array:
-        # this method is supposed to work with a array where the rows correspond to the number of rows, while the column cooresponds to the number of bands
-        # n_samples, _ = np.array(ee_X.getInfo()).shape
-        x = ee_X # dim: (n_samples, b_bands)
-        for i in range(self.model.n_layers_ - 1):
-            x = x.matrixMultiply(self.ee_array_weights[i])
-            x = x.add(self.ee_array_biases[i].repeat(axis = 0, copies = n_samples))
-            if i != self.model.n_layers_ - 2:
-                x = self._apply_activation_function(x, self.model.activation)
-        # need to add output activation sk_model.out_activation was not identity
-        # apply output activation
-        x = self._apply_activation_function(x, self.model.out_activation_)
-        return x
-    
     def _forward_pass_image(self, ee_X: ee.Image) -> ee.Image:
         # # convert input image to arrayImage where each pixel holds an array of shape (1, n_bands)
         # array_X_1D = ee_X.toArray() # dim: (n_bands)

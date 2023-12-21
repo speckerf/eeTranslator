@@ -6,8 +6,6 @@ from loguru import logger
 
 from sklearn.neural_network import MLPRegressor
 
-ee.Initialize() # needs to be in top: otherwise type hinting with ee.xyz types doesn't work
-
 class eeMLPRegressor:
     def __init__(self, model: MLPRegressor, prediction_name: str = 'prediction') -> None:
         self.model = model

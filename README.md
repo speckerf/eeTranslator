@@ -1,4 +1,4 @@
-# Translate locally trained scikit-learn models for GEE server-side predictions
+# eeTranlator / training locally - predicting on GEE
 
 This repository contains classes which accept fitted scikit-learn objects and translate the predict/classify step to GEE server side functions. 
 Requires to have a GEE account. 

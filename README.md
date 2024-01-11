@@ -8,3 +8,5 @@ Currently implemented:
 - sklearn.preprocessing.StandardScaler --> eeStandardScaler
 
 Contributions are welcome.
+
+Developed within the Open-Earth-Monitor Cyberinfrastructure project: [Link](https://earthmonitor.org/)

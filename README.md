@@ -1,5 +1,7 @@
 # eeTranslator: train locally - predict on GEE server-side
 
+Documentation coming soon... See examples/rtm_inversion.ipynb in the meantime. 
+
 This repository contains classes which accept fitted scikit-learn objects and translate the predict/classify step to GEE server side functions. 
 Requires to have a GEE account. Please see the example: examples/rtm_inversion.ipynb
 
